@@ -5,7 +5,7 @@
   "version": "0.1.1",
   "main": "./lib/wrapper.js",
   "repository": {
-    "url": ""
+    "url": "https://github.com/socketstream/ss-stylus"
   },
   "engines": {
     "node": ">= 0.6.0"
