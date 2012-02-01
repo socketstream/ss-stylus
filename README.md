@@ -8,3 +8,10 @@ Allows you to use Stylus files (.styl) in your SocketStream project.
 Add `ss-stylus` to your application's `package.json` file and then add this line to app.js:
 
     ss.client.formatters.add(require('ss-stylus'));
+
+[Nib](http://visionmedia.github.com/nib) is included by default. To use this in your app add:
+
+    @import 'nib'
+
+at the top of your .styl file.
+
