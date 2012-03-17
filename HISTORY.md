@@ -1,4 +1,4 @@
-0.1.2 / 2012-01-14
+0.1.2 / 2012-02-01
 ==================
 
 * Added support for Nib (thanks David Rosen)
