@@ -29,7 +29,8 @@ exports.init = function(root, config) {
         .use(nib())
         .render(function(err, css) {
         if (err) {
-          console.log('! - Unable to compile Stylus file %s into CSS', path);
+          var message = '! - Unable to compile Stylus file %s into CSS';
+          console.log(String.prototype.hasOwnProperty('red') && message.red || message, path);
           console.log(err);
         }
         cb(css);
