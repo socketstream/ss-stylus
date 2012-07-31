@@ -1,8 +1,8 @@
 // Stylus 'CSS' wrapper for SocketStream 0.3
 
-var fs = require('fs')
-  , stylus = require('stylus')
-  , nib = require('nib');
+var fs = require('fs'),
+    stylus = require('stylus'),
+    nib = require('nib');
 
 exports.init = function(root, config) {
 
@@ -36,5 +36,5 @@ exports.init = function(root, config) {
         cb(css);
       });
     }
-  }
-}
+  };
+};
