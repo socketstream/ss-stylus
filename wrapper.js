@@ -2,7 +2,14 @@
 
 var fs = require('fs'),
     stylus = require('stylus'),
-    nib = require('nib');
+    nib = require('nib'),
+    _prependedStylus;
+
+exports.prependStylus = function(prependedStylus) {
+  if(typeof prependedStylus === 'string') {
+    _prependedStylus = prependedStylus;
+  }
+};
 
 exports.init = function(root, config) {
 
@@ -24,6 +31,10 @@ exports.init = function(root, config) {
       var input = fs.readFileSync(path, 'utf8');
 
       var compress = options && options.compress;
+
+      if(_prependedStylus) {
+        input = _prependedStylus + '\n' + input;
+      }
 
       stylus(input, {filename: path, paths: [dir.join('/')], compress: compress})
         .use(nib())
