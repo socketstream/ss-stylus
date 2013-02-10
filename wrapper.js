@@ -36,7 +36,7 @@ exports.init = function(root, config) {
         input = _prependedStylus + '\n' + input;
       }
 
-      stylus(input, {filename: path, paths: [dir.join('/')], compress: compress})
+      stylus(input, {filename: path, paths: [dir.join('/')]})
         .use(nib())
         .render(function(err, css) {
         if (err) {
