@@ -2,7 +2,7 @@
   "name": "ss-stylus",
   "author": "Owen Barnes <owen@socketstream.org>",
   "description": "Stylus (CSS) wrapper for SocketStream 0.3",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "./wrapper.js",
   "repository": {
     "type": "git",
@@ -12,8 +12,8 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "stylus": "~0.32.0",
-    "nib": "~0.9.1"
+    "stylus": "~0.32.X",
+    "nib": "~0.9.X"
   },
   "devDependencies": {}
 }

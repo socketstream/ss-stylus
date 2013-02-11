@@ -15,12 +15,17 @@ Add `ss-stylus` to your application's `package.json` file and then add this line
 
 at the top of your .styl file.
 
+
 ### JavaScript variable injection
 
-The `ss-stylus` wrapper allows you to inject JavaScript variables into your Stylus code via a prepended Stylus string of your own making. For example:
+The `ss-stylus` wrapper allows you use JavaScript variables within your Stylus code.
 
-	var ssStylus = require('ss-stylus');
-	var assetsPath = 'https://s3.amazonaws.com/example_assets_path/';
-	...
-	ssStylus.prependStylus('$assetsPath = \'' + assetsPath + '\'');
-	ss.client.formatters.add(ssStylus);
+This can be useful if you need to serve assets from a CDN in production. For example:
+
+```js
+var ssStylus = require('ss-stylus');
+var assetsPath = 'https://s3.amazonaws.com/example_assets_path/';
+
+ssStylus.prependStylus('$assetsPath = \'' + assetsPath + '\'');
+ss.client.formatters.add(ssStylus);
+```

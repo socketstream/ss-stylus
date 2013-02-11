@@ -1,3 +1,11 @@
+0.1.6 / 2013-02-11
+==================
+
+* Updated `stylus` to 0.32.X and `nib` to 0.9.X
+* Allowed JS vars to be prepended to Stylus output, useful for CDNs (thanks americanyak)
+* No longer compresses output in Production (already handled by css-clean) (thanks mdedetrich)
+
+
 0.1.5 / 2012-07-31
 ==================
 
