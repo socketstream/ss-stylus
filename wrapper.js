@@ -36,8 +36,11 @@ exports.init = function(root, config) {
         input = _prependedStylus + '\n' + input;
       }
 
-      stylus(input, {filename: path, paths: [dir.join('/')]})
-        .use(nib())
+      var sss = stylus(input, {filename: path, paths: [dir.join('/')]});
+      for (var c in config) {
+        sss.set(c, config[c]);
+      }
+      sss.use(nib())
         .render(function(err, css) {
         if (err) {
           var message = '! - Unable to compile Stylus file %s into CSS';
