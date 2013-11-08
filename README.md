@@ -29,3 +29,11 @@ var assetsPath = 'https://s3.amazonaws.com/example_assets_path/';
 ssStylus.prependStylus('$assetsPath = \'' + assetsPath + '\'');
 ss.client.formatters.add(ssStylus);
 ```
+
+### Including CSS imports
+
+To include CSS imports, pass these options to loading the ss-stylus library:
+
+    ss.client.formatters.add(require('ss-stylus'), { 'include css' : true });
+
+
