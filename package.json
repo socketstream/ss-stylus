@@ -17,8 +17,8 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "stylus": "~0.32.X",
-    "nib": "~0.9.X"
+    "stylus": "0.41.3",
+    "nib": "1.0.1"
   },
   "devDependencies": {}
 }
