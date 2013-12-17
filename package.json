@@ -1,8 +1,9 @@
 {
   "name": "ss-stylus",
-  "author": "Owen Barnes <owen@socketstream.org>",
+  "author": "Owen Barnes <owen@socketstream.com>",
+  "maintainer": "Paul Jensen <paul@socketstream.com>",
   "description": "Stylus (CSS) wrapper for SocketStream 0.3",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "./wrapper.js",
   "repository": {
     "type": "git",
@@ -11,7 +12,8 @@
   "contributors": [
     "Robert Hall (americanYak on Github)",
     "Christian Sterzl (Waxolunist on Github)",
-    "David Rosen (drosen0 on Github)"
+    "David Rosen (drosen0 on Github)",
+    "Simon Lang (captainclam on Github)"
   ],
   "engines": {
     "node": ">= 0.6.0"
