@@ -2,7 +2,7 @@
 
 var fs = require('fs'),
     stylus = require('stylus'),
-    nib = require('nib'),
+    plugins = {},
     _prependedStylus;
 
 exports.prependStylus = function(prependedStylus) {
@@ -24,7 +24,7 @@ exports.init = function(root, config) {
     contentType: 'text/css',
 
     compile: function(path, options, cb) {
-      
+
       // Get dir from path to enable @include commmand
       var dir = path.split('/'); dir.pop();
 
@@ -40,8 +40,12 @@ exports.init = function(root, config) {
       for (var c in config) {
         sss.set(c, config[c]);
       }
-      sss.use(nib())
-        .render(function(err, css) {
+      if (config && config.extra) {
+        for (var plugin in config.extra) {
+          sss.use(config.extra[plugin]());
+        }
+      }
+      sss.render(function(err, css) {
         if (err) {
           var message = '! - Unable to compile Stylus file %s into CSS';
           console.log(String.prototype.hasOwnProperty('red') && message.red || message, path);
