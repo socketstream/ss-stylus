@@ -9,7 +9,11 @@ Add `ss-stylus` to your application's `package.json` file and then add this line
 
     ss.client.formatters.add(require('ss-stylus'));
 
-[Nib](http://visionmedia.github.com/nib) is included by default. To use this in your app add:
+No plugins are included by default. If you want to use something just provide it with second parameter to ```ss.client.formatters.add``` function:
+
+    ss.client.formatters.add(require('ss-stylus'), {extra: {nib: require('nib')}});
+
+After that you can use this in your app. Just add:
 
     @import 'nib'
 
